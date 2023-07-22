@@ -1,24 +1,25 @@
-import logo from './logo.svg';
+import { Routes, Route } from 'react-router-dom';
+import Home from './Componets/Home';
 import './App.css';
+import Subproduct from './Componets/Subproduct';
 
 function App() {
+
+  
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+      <>
+      
+        <div className='d-flex justify-content-around titale_color'>
+                <h1>Sumeru City Mall </h1>
+        </div>
+
+        <Routes>
+            <Route path='/' element={<Home />} />
+            <Route path=':id' element={<Subproduct />} />
+        </Routes>
+       
+      </>
   );
 }
 
