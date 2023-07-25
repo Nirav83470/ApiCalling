@@ -3,10 +3,12 @@ import axios from 'axios';
 import '../App.css';
 import { Link } from 'react-router-dom';
 
+
 const Home = () => {
 
 
   const [data, setdata] = useState([]);
+
 
   useEffect(() => {
     axios
@@ -22,9 +24,16 @@ const Home = () => {
       });
   }, []);
 
+
+
+
   return (
     <>
       <div className="container">
+
+          
+  
+
         <div className="row">
           {data.map((items) => {
             return (
